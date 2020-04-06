@@ -1,0 +1,28 @@
+body {
+  font-size: 10px;
+
+  background-color: antiquewhite;
+}
+.main {
+  width: 80%;
+  height: 100vh;
+  margin: 10px 10%;
+
+  font-family: "Ubuntu Mono", monospace;
+}
+.textarea {
+  width: 668px;
+  height: 200px;
+  margin: 10px auto;
+
+  font-size: 20px;
+  color: #000000;
+
+  background-color: white;
+}
+.keyboard {
+  width: 668px;
+  height: 200px;
+
+  background-color: grey;
+}
