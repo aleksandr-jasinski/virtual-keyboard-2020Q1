@@ -4,14 +4,14 @@ body {
   background-color: antiquewhite;
 }
 .main {
-  width: 80%;
+  width: 90vw;
   height: 100vh;
-  margin: 10px 10%;
+  margin: 10px 5vw;
 
   font-family: "Ubuntu Mono", monospace;
 }
 .textarea {
-  width: 668px;
+  width: 706px;
   height: 200px;
   margin: 10px auto;
 
@@ -21,8 +21,62 @@ body {
   background-color: white;
 }
 .keyboard {
-  width: 668px;
-  height: 200px;
+  width: 706px;
+  height: 250px;
 
   background-color: grey;
+  border: 1px solid black;
+}
+.row {
+  height: 50px;
+  padding: 2px;
+}
+.key {
+  display: inline-block;
+  height: 40px;
+  margin: 2px 2px 0 2px;
+  padding: 5px;
+
+  font-size: 20px;
+  font-family: Tahoma, Verdana, sans-serif;
+  text-align: center;
+  color: white;
+
+  background-color: black;
+  border-radius: 5px;
+}
+.key_square {
+  width: 40px;
+}
+.key_tab {
+  width: 60px;
+}
+.key_twin {
+  width: 104px;
+
+  font-size: 20px;
+
+  background-color: black;
+}
+.space {
+  width: 337px;
+}
+#id_Backspace {
+  width: 124px;
+}
+
+#id_CapsLock {
+  width: 104px;
+}
+#id_Enter {
+  width: 104px;
+}
+
+.key_transform {
+  z-index: 22;
+
+  font-size: 22px !important;
+
+  background-color: blue !important;
+  border-radius: 50% !important;
 }
