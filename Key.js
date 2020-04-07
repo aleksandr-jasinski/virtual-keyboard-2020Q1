@@ -67,7 +67,7 @@ class Key {
 
   get keyBackSlash() {
     let span = document.createElement('span');
-    span.className = 'key key_square sign';
+    span.className = 'key key_square sign Backslash';
     span.id = 'id_BackSlash'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -79,7 +79,7 @@ class Key {
 
   get keyShiftLeft() {
     let span = document.createElement('span');
-    span.className = 'key shift';
+    span.className = 'key shift ShiftLeft';
     span.id = 'id_ShiftLeft'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -91,7 +91,7 @@ class Key {
 
   get keyShiftRight() {
     let span = document.createElement('span');
-    span.className = 'key  shift';
+    span.className = 'key shift ShiftRight';
     span.id = 'id_ShiftRight'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -102,7 +102,7 @@ class Key {
   }
   get keyCtrlLeft() {
     let span = document.createElement('span');
-    span.className = 'key ctrl';
+    span.className = 'key ctrl ControlLeft';
     span.id = 'id_CtrlLeft'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -114,7 +114,7 @@ class Key {
 
   get keyWin() {
     let span = document.createElement('span');
-    span.className = 'key win';
+    span.className = 'key win MetaLeft';
     span.id = 'id_' + this.inscription;
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -126,7 +126,7 @@ class Key {
 
   get keySpace() {
     let span = document.createElement('span');
-    span.className = 'key space';
+    span.className = 'key Space';
     span.id = 'id_Space' + this.inscription;
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -138,7 +138,7 @@ class Key {
 
   get keyAltLeft() {
     let span = document.createElement('span');
-    span.className = 'key key_square alt';
+    span.className = 'key key_square alt AltLeft';
     span.id = 'id_AltLeft'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -150,7 +150,7 @@ class Key {
 
   get keyAltRight() {
     let span = document.createElement('span');
-    span.className = 'key key_square alt';
+    span.className = 'key key_square alt AltRight';
     span.id = 'id_AltRight'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -162,7 +162,7 @@ class Key {
 
   get keyCtrlRight() {
     let span = document.createElement('span');
-    span.className = 'key ctrl';
+    span.className = 'key ctrl ControlRight';
     span.id = 'id_CtrlRight'
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
