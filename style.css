@@ -72,7 +72,12 @@ body {
 #id_Enter {
   width: 104px;
 }
-
+#id_ShiftLeft {
+  width: 123px;
+}
+#id_ShiftRight {
+  width: 85px;
+}
 .key_transform {
   z-index: 22;
 

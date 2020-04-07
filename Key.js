@@ -52,7 +52,7 @@ class Key {
 
   get keyShiftLeft() {
     let span = document.createElement('span');
-    span.className = 'key key_twin shift';
+    span.className = 'key shift';
     span.id = 'id_ShiftLeft'
     span.innerHTML = this.inscription;
     return span;
@@ -60,7 +60,7 @@ class Key {
 
   get keyShiftRight() {
     let span = document.createElement('span');
-    span.className = 'key key_twin shift';
+    span.className = 'key  shift';
     span.id = 'id_ShiftRight'
     span.innerHTML = this.inscription;
     return span;
