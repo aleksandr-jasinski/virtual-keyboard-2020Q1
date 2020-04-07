@@ -13,6 +13,7 @@ main.append(textarea);
 const keyboard = document.createElement('section');
 keyboard.className = 'keyboard';
 keyboard.id = 'keyboard';
+keyboard.tabIndex = '1';
 main.append(keyboard);
 
 // First row - Digits & Signs
@@ -237,7 +238,7 @@ const pointKey = new Key('.').keySign;
 pointKey.classList.add('Slash');
 row_4.append(pointKey);
 
-const arrowUpKey = new Key('▲').keySign;
+const arrowUpKey = new Key('▲').keyArrow;
 arrowUpKey.classList.add('ArrowUp');
 row_4.append(arrowUpKey);
 
@@ -262,40 +263,72 @@ row_5.append(spaceKey);
 const altRight = new Key('Alt').keyAltRight;
 row_5.append(altRight);
 
-const arrowLeftKey = new Key('◄').keySign;
+const arrowLeftKey = new Key('◄').keyArrow;
 arrowLeftKey.classList.add('ArrowLeft');
 row_5.append(arrowLeftKey);
 
-const arrowDownKey = new Key('▼').keySign;
+const arrowDownKey = new Key('▼').keyArrow;
 arrowDownKey.classList.add('ArrowDown');
 row_5.append(arrowDownKey);
 
-const arrowRightKey = new Key('►').keySign;
+const arrowRightKey = new Key('►').keyArrow;
 arrowRightKey.classList.add('ArrowRight');
 row_5.append(arrowRightKey);
 
 const ctrlRight = new Key('Ctrl').keyCtrlRight;
 row_5.append(ctrlRight);
 
-let keys = document.querySelectorAll('.key');
+const descrition = document.createElement('p');
+descrition.innerHTML = 'Виртуальная клавиатура создана в ОС Ubuntu 19.10 <br> Реализована только русская раскладка со строчными буквами'
+keyboard.append(descrition);
 
 // Highlighting pressed keys
 
 document.addEventListener('keydown', function (event) {
   let pressedKey = document.querySelector('.' + event.code);
   pressedKey.classList.add('key_transform');
-  console.log(event);
-  console.log(event.code);
-  console.log(event.which);
-  if (event.code == 'Tab') {
-    console.log(textarea.tabIndex += 1);
-  }
 });
 
 document.addEventListener('keyup', function (event) {
   let pressedKey = document.querySelector('.' + event.code);
   pressedKey.classList.remove('key_transform');
-  console.log(event);
-  console.log(event.code);
-  console.log(event.which);
 });
+
+// printing letters, didgits & signs on click
+
+document.addEventListener('click', function (event) {
+
+  switch (event.target.classList[2]) {
+    case 'digit':
+      textarea.append(event.target.innerHTML);
+      break;
+    case 'sign':
+      textarea.append(event.target.innerHTML);
+      break;
+    case 'letter':
+      textarea.append(event.target.innerHTML);
+
+      console.log(textarea.innerHTML);
+  }
+});
+
+document.addEventListener('click', function (event) {
+  //console.log(event.target.classList[3]);
+
+  switch (event.target.classList[3]) {
+
+    case 'Backspace':
+      let text = textarea.innerHTML;
+      textarea.innerHTML = text.split('').slice(0, -1).join('');
+      break;
+
+    case 'Enter':
+      textarea.append('\n');
+      break;
+    case 'Space':
+      textarea.append(' ');
+      break;
+  }
+});
+
+

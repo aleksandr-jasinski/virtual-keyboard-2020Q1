@@ -7,7 +7,7 @@ class Key {
 
   get keyCyrillicSmall() {
     let span = document.createElement('span');
-    span.className = 'key key_square cyrillic_small';
+    span.className = 'key key_square letter cyrillic small';
     span.id = 'id_' + this.inscription.charCodeAt(0);
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
@@ -117,6 +117,7 @@ class Key {
     span.className = 'key win MetaLeft';
     span.id = 'id_' + this.inscription;
     span.innerHTML = this.inscription;
+    span.tabIndex = '2';
     span.onmousedown = function () { span.classList.add('key_transform'); };
     span.onmouseup = function () { span.classList.remove('key_transform'); };
     span.onmouseover = function () { span.classList.add('mover'); };
@@ -126,8 +127,8 @@ class Key {
 
   get keySpace() {
     let span = document.createElement('span');
-    span.className = 'key Space';
-    span.id = 'id_Space' + this.inscription;
+    span.className = 'key zx ab Space';
+    span.id = 'id_Space';
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
     span.onmouseup = function () { span.classList.remove('key_transform'); };
@@ -164,6 +165,18 @@ class Key {
     let span = document.createElement('span');
     span.className = 'key ctrl ControlRight';
     span.id = 'id_CtrlRight'
+    span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
+    return span;
+  }
+
+  get keyArrow() {
+    let span = document.createElement('span');
+    span.className = 'key key_square arrow';
+    span.id = 'id_arrow_' + this.inscription.charCodeAt(0);
     span.innerHTML = this.inscription;
     span.onmousedown = function () { span.classList.add('key_transform'); };
     span.onmouseup = function () { span.classList.remove('key_transform'); };
