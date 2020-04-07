@@ -278,9 +278,10 @@ row_5.append(arrowRightKey);
 const ctrlRight = new Key('Ctrl').keyCtrlRight;
 row_5.append(ctrlRight);
 
-const descrition = document.createElement('p');
-descrition.innerHTML = 'Виртуальная клавиатура создана в ОС Ubuntu 19.10 <br> Реализована только русская раскладка со строчными буквами'
-keyboard.append(descrition);
+const descritio = document.createElement('p');
+descritio.innerHTML = 'Виртуальная клавиатура создана в ОС Ubuntu 19.10 <br> Реализована только русская раскладка со строчными буквами'
+descritio.className = 'p_desc';
+keyboard.append(descritio);
 
 // Highlighting pressed keys
 
@@ -307,13 +308,10 @@ document.addEventListener('click', function (event) {
       break;
     case 'letter':
       textarea.append(event.target.innerHTML);
-
-      console.log(textarea.innerHTML);
   }
 });
 
 document.addEventListener('click', function (event) {
-  //console.log(event.target.classList[3]);
 
   switch (event.target.classList[3]) {
 
