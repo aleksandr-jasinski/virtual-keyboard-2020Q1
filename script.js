@@ -221,23 +221,5 @@ row_5.append(arrowRightKey);
 const ctrlRight = new Key('Ctrl').keyCtrlRight;
 row_5.append(ctrlRight);
 
-// highlighting a key on click
-keyboard.onclick = function (event) {
-  let target = event.target;
-  if (target.tagName != 'SPAN') return;
-  highlight(target);
-}
+let keys = document.querySelectorAll('.key');
 
-let selectedSpan;
-
-function highlight(span) {
-  if (selectedSpan) {
-    selectedSpan.classList.remove('key_transform');
-  }
-
-  selectedSpan = span;
-  selectedSpan.classList.add('key_transform');
-
-  setTimeout(() => selectedSpan.classList.remove('key_transform'), 200);
-  ;
-}

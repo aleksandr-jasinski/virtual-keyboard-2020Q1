@@ -2,11 +2,18 @@ class Key {
   constructor(inscription) {
     this.inscription = inscription;
   }
+
+
+
   get keyCyrillicSmall() {
     let span = document.createElement('span');
     span.className = 'key key_square cyrillic_small';
     span.id = 'id_' + this.inscription.charCodeAt(0);
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -15,6 +22,10 @@ class Key {
     span.className = 'key key_square digit';
     span.id = 'id_' + this.inscription.charCodeAt(0);
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -23,6 +34,10 @@ class Key {
     span.className = 'key key_square sign';
     span.id = 'id_sign_' + this.inscription.charCodeAt(0);
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -31,6 +46,10 @@ class Key {
     span.className = 'key key_twin signature';
     span.id = 'id_' + this.inscription;
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -39,6 +58,10 @@ class Key {
     span.className = 'key key_tab signature';
     span.id = 'id_' + this.inscription;
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -47,6 +70,10 @@ class Key {
     span.className = 'key key_square sign';
     span.id = 'id_BackSlash'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -55,6 +82,10 @@ class Key {
     span.className = 'key shift';
     span.id = 'id_ShiftLeft'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -63,6 +94,10 @@ class Key {
     span.className = 'key  shift';
     span.id = 'id_ShiftRight'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
   get keyCtrlLeft() {
@@ -70,6 +105,10 @@ class Key {
     span.className = 'key ctrl';
     span.id = 'id_CtrlLeft'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -78,6 +117,10 @@ class Key {
     span.className = 'key win';
     span.id = 'id_' + this.inscription;
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -86,6 +129,10 @@ class Key {
     span.className = 'key space';
     span.id = 'id_Space' + this.inscription;
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -94,6 +141,10 @@ class Key {
     span.className = 'key key_square alt';
     span.id = 'id_AltLeft'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -102,6 +153,10 @@ class Key {
     span.className = 'key key_square alt';
     span.id = 'id_AltRight'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 
@@ -110,6 +165,10 @@ class Key {
     span.className = 'key ctrl';
     span.id = 'id_CtrlRight'
     span.innerHTML = this.inscription;
+    span.onmousedown = function () { span.classList.add('key_transform'); };
+    span.onmouseup = function () { span.classList.remove('key_transform'); };
+    span.onmouseover = function () { span.classList.add('mover'); };
+    span.onmouseout = function () { span.classList.remove('mover'); };
     return span;
   }
 }
