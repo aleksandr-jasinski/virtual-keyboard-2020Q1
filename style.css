@@ -11,7 +11,7 @@ body {
   font-family: "Ubuntu Mono", monospace;
 }
 .textarea {
-  width: 706px;
+  width: 710px;
   height: 200px;
   margin: 10px auto;
 
@@ -21,7 +21,7 @@ body {
   background-color: white;
 }
 .keyboard {
-  width: 706px;
+  width: 710px;
   height: 250px;
 
   background-color: grey;
@@ -29,6 +29,7 @@ body {
 }
 .row {
   height: 50px;
+  margin: 0 auto;
   padding: 2px;
 }
 .key {
@@ -75,7 +76,7 @@ body {
 .key_transform {
   z-index: 22;
 
-  font-size: 22px !important;
+  font-size: 21px !important;
 
   background-color: blue !important;
   border-radius: 50% !important;
